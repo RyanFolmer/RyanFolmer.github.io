@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ryan Folmer (Projects)</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+    <style>
+        #navigation {
+            border-style:solid;
+            color:#A349A4;
+            background-image: url("../Assets/jigglypuff_hero.jpg");
+            background-color: #4C0152;
+            position:fixed;
+            width:100%;
+            z-index:2;
+        }
+
+        #navigation ul {
+            list-style:none;
+        }
+
+        #navigation ul li{
+            display:inline;
+            color:#A349A4;
+        }
+
+        #content, #copyright, button {
+            position:relative;
+            top:120px;
+            z-index:1;
+        }
+
+        button:hover {
+            background-color:purple;
+        }
+
+        .images {
+            width:100%;
+            border:solid;
+            padding:5px;
+            margin:5px;
+        }
+
+        #projectList, .text {
+            color:#A349A4;
+            font-family:arial,sans-serif;
+            border-style:solid;
+            width:100%;
+            display:flex;
+        }
+
+        #projectList td {
+            border-style:solid;
+            padding:10px;
+        }
+
+        #projectList td p {
+            font-size:1.75vw
+        }
+
+        .imageData {
+            display:flex;
+            flex-direction:row;
+        }
+
+        @media (max-width:800px) {
+            .imageData {flex-direction:column;}
+        }
+    </style>
+</head>
+
+<body style="background-color:#4C0152">
+    <nav id="navigation">
+        <ul style="list-style:none">
+            <li style="display:inline; color:#A349A4">
+                <a href="../index.html" style="font-family:arial,sans-serif; color:#A349A4;">
+                    Home / About Me
+                </a>
+                |
+            </li>
+            <li style="display:inline; color:#A349A4;">
+                <a href="Projects.html" style="color:#A349A4; font-family:arial,sans-serif;">
+                    Projects
+                </a>
+                |
+            </li>
+            <li style="display:inline; color:#A349A4">
+                <a href="Contact.html" style="color:#A349A4; font-family:arial,sans-serif;">
+                    Contact
+                </a>
+            </li>
+            <li style="display:inline">
+                <h1 style="color:#A349A4; font-family:arial,sans-serif; font-size:40px; text-align:center">
+                    Ryan Folmer
+                </h1>
+            </li>
+        </ul>
+    </nav>
+
+    <hr style="background-color:#A349A4; color:#A349A4; height:3px;" id="navRule">
+
+    <div id="content">
+    <p style="color:#A349A4; font-family:arial,sans-serif; font-size:25px; border-style:solid; padding:10px;
+    text-align:center">
+        This is a list of projects I have worked on.
+    </p>
+
+    <table id="projectList" aria-label="Project List">
+        <tr id="MSPain">
+            <td>
+                <p style="font-size:2vw; border-style:solid; padding:10px;
+    text-align:center">
+                MS Pain
+                </p>
+                <p>
+                    This is a mod for the rhythm game Friday Night Funkin. Made to learn graphics and texture
+                    mapping. Replaces in-game graphics with pictures drawn in MS Paint, as the name suggests.
+                </p>
+                <a href="https://gamebanana.com/mods/186813" target="_blank" style="color:#A349A4">Link to Gamebanana Page</a>
+            </td>
+            <td class="imageData">
+                <img class="images" src="../Assets/MSPainTitle.jpg"
+                     alt="Whoops! Image failed to load! This is the title screen of my FNF mod."
+                     aria-label="MS Pain Title Screen">
+                <img class="images" src="../Assets/MSPainLevel1.jpg"
+                     alt="Whoops! Image failed to load! This is a screenshot of level 1 of my FNF mod."
+                     aria-label="MS Pain Level">
+            </td>
+            <td style="border-style:solid;">
+                <iframe src="https://youtube.com/embed/YNGpJujRiG0?autoplay=1&mute=1"
+                        style="width:100%;" aria-label="Embedded video of MS Pain gameplay."></iframe>
+            </td>
+        </tr>
+        <tr id="slayerMod">
+            <td>
+                <p style="font-size:2vw; border-style:solid; padding:10px;
+    text-align:center">
+                    YOMIH Slayer Mod
+                </p>
+                <p>
+                    This is a WIP mod for the game YOMI Hustle, which will add the character Slayer from the Guilty
+                    Gear franchise. This is a passion project exploring game development and modding. Currently on
+                    hold during the school year.
+                </p>
+            </td>
+            <td class="imageData">
+                <img class="images" src="../Assets/SlayerSprites1.png"
+                     alt="Whoops! Image failed to load! This is a WIP image of the Slayer mod."
+                     aria-label="Work In Progress image of Slayer mod sprite.">
+                <img class="images" src="../Assets/SlayerSprites2.png"
+                     alt="Whoops! Image failed to load! This is a WIP image of the Slayer mod."
+                     aria-label="Work In Progress image of Slayer mod sprite.">
+            </td>
+            <td>
+                <video width="100%" controls aria-label="Video of Slayer in his source material, Guilty Gear Strive.">
+                    <source src="../Assets/Videos/SlayerPBLoopPlaceholder.mp4">
+                </video>
+                Placeholder until mod is in a video-able state.
+            </td>
+        </tr>
+    </table>
+    <p id="plansForFuture"
+       style="color:#A349A4; font-family:arial,sans-serif; font-size:2vw; border-style:solid; padding:10px;
+    text-align:center">
+        Currently, my top priority project would be finishing Slayer. I also want to get into a co-op, and depending
+        on where I could add work from there onto this page.
+    </p>
+    <ol style="color:#A349A4; font-family:arial,sans-serif; font-size:1.75vw; border-style:solid; text-align:center">
+        <li>
+            Slayer Mod for YOMI Hustle. Todo:
+            <ul>
+                <li>
+                    Finish Move List
+                </li>
+                <li>
+                    Finish Spritework
+                </li>
+                <li>
+                    Bugfixing
+                </li>
+            </ul>
+        </li>
+        <li>
+            Future endeavours.
+        </li>
+    </ol>
+
+        <div class="text">
+            <audio controls>
+                <source src="../Assets/Audio/Stew.flac">
+            </audio>
+            Song by Nova Scotia band Dogpile. I am friends with their guitarist.
+        </div>
+
+
+        <button onclick="colorSwapDark()"> Dark Mode </button>
+        <button onclick="colorSwapBlue()"> Blueifier </button>
+        <button onclick="colorSwapNormal()"> Normal </button>
+
+        <script>
+            function colorSwapDark() {
+                document.body.style.backgroundColor="#150017";
+                document.getElementById("navigation").style.backgroundColor="#150017";
+                document.getElementById("navRule").style.backgroundColor="#A349A4";
+
+                var elements = document.querySelectorAll("p, a, li, h1, h2, nav, hr, table, tr, td, ol");
+
+                for (let i = 0; i < elements.length; i++){
+                    elements[i].style.color="#A349A4";
+                }
+            }
+
+            function colorSwapBlue() {
+                document.body.style.backgroundColor="#1C2059";
+                document.getElementById("navigation").style.backgroundColor="#1C2059";
+                document.getElementById("navRule").style.backgroundColor="#3F48CC";
+
+                var elements = document.querySelectorAll("p, a, li, h1, h2, nav, hr, table, tr, td, ol");
+
+                for (let i = 0; i < elements.length; i++){
+                    elements[i].style.color="#3F48CC";
+                }
+            }
+
+            function colorSwapNormal() {
+                document.body.style.backgroundColor="#4C0152";
+                document.getElementById("navigation").style.backgroundColor="#4C0152";
+                document.getElementById("navRule").style.backgroundColor="#A349A4";
+
+                var elements = document.querySelectorAll("p, a, li, h1, h2, nav, hr, table, tr, td, ol");
+
+                for (let i = 0; i < elements.length; i++){
+                    elements[i].style.color="#A349A4";
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>
