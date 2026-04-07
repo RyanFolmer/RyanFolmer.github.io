@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ryan Folmer (Home)</title>
+    <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
+    <style>
+        #navigation {
+            border-style:solid;
+            color:#A349A4;
+            background-image: url("Assets/jigglypuff_hero.jpg");
+            background-color:#4C0152;
+            position:fixed;
+            width:100%;
+            z-index:2;
+        }
+
+        #navigation ul {
+            list-style:none:
+        }
+
+        #navigation ul li{
+            display:inline;
+            color:#A349A4;
+        }
+
+        .content, #copyright {
+            position:relative;
+            top:120px;
+            z-index:1;
+        }
+
+        button {
+            position:relative;
+            top:120px;
+            z-index:1;
+        }
+
+        button:hover {
+            background-color:purple;
+        }
+
+        .content {
+            display:grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+        }
+
+        .content * {
+            font-family:arial,sans-serif;
+            color:#A349A4;
+            font-size:2vw;
+        }
+
+        .content p {
+            border-style:solid;
+            padding:10px;
+            text-indent:30px;
+        }
+
+        .images {
+            width:100%;
+            border:solid;
+            padding:5px;
+            margin:5px;
+        }
+
+        @media (max-width:600px) {
+            .content {grid-template-columns:auto;}
+        }
+    </style>
+    <!--Contains an event handler with the :hover pseudoclass-->
+</head>
+
+<body style="background-color:#4C0152">
+    <nav id="navigation">
+        <ul>
+            <li>
+                <a href="index.html" style="font-family:arial,sans-serif; color:#A349A4;">
+                Home / About Me
+                </a>
+                 |
+            </li>
+            <li>
+                <a href="subpages/Projects.html" style="color:#A349A4; font-family:arial,sans-serif;">
+                    Projects
+                </a>
+                 |
+            </li>
+            <li>
+                <a href="subpages/Contact.html" style="color:#A349A4; font-family:arial,sans-serif;">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <h1 style="color:#A349A4; font-family:arial,sans-serif; font-size:40px; text-align:center">
+                    Ryan Folmer
+                </h1>
+            </li>
+        </ul>
+        <hr style="background-color:#A349A4; color:#A349A4; height:3px;" id="navRule">
+    </nav>
+
+
+    <div class="content">
+            <p id="About-Me">
+            Hello! My name is Ryan Folmer, and I am a first-year computer science student at Dalhousie University in
+            Halifax, Nova Scotia. This is a website built for a web development intro course, but it also shows some
+            projects I have worked on and will work on, as well as being a little personal place on the internet. I am
+            interested in game development, cybersecurity, and robotics.
+                <br><br>
+            This website was built for CSCI 1170: Intro to Web Development. It should feature three pages, a navigation
+            system, pictures, videos, audio, and other features used to show proficiency with HTML. For example, this
+                paragraph and image are actually set up as a table.
+                <br><br>
+                I plan to work on a few things in the future, mainly a character mod for the game Your Only Move Is
+                Hustle. I know modding is a good on-ramp to game development, so hopefully I get some good experience
+                from that. I also want to finish a card game I made during high school. Currently, that game exists as
+                a paper prototype, but in the future a digital version would be a good idea.
+            </p>
+            <img id="Self-Portrait" class="images" src="Assets/RyanFolmer.JPG" alt="Whoops! Image Didn't work!"
+                 onclick="functionChange()"
+                 aria-label="Portrait of myself, taken by Dominic Richard for a photography class.">
+
+        <form class="content" id="guestbook">
+            <label for="name">Sign your name in the Guestbook!</label>
+            <input type="text" id="name">
+        </form>
+    </div>
+
+    <p id="copyright" style="color:#A349A4; font-family:arial,sans-serif; font-size:10px; text-align:center">
+        Copyright Ryan Folmer, 2026 | Dalhousie
+    </p>
+
+    <button onclick="colorSwapDark()"> Dark Mode </button>
+    <button onclick="colorSwapBlue()"> Blueifier </button>
+    <button onclick="colorSwapNormal()"> Normal </button>
+
+    <script>
+        var changeClicks = 0;
+
+        function functionChange() { //conditional
+            changeClicks++;
+
+            if (changeClicks > 2) {
+                document.getElementById("Self-Portrait").src="Assets/laughingCat.jpg";
+            }
+        }
+
+        function colorSwapDark() {
+            document.body.style.backgroundColor="#150017";
+            document.getElementById("navigation").style.backgroundColor="#150017";
+            document.getElementById("navRule").style.backgroundColor="#A349A4";
+
+            var elements = document.querySelectorAll("p, a, li, h1, h2, nav, hr, label");
+
+            for (let i = 0; i < elements.length; i++){
+                elements[i].style.color="#A349A4";
+            }
+        }
+
+        function colorSwapBlue() {
+            document.body.style.backgroundColor="#1C2059";
+            document.getElementById("navigation").style.backgroundColor="#1C2059";
+            document.getElementById("navRule").style.backgroundColor="#3F48CC";
+
+            var elements = document.querySelectorAll("p, a, li, h1, h2, nav, hr, label");
+
+            for (let i = 0; i < elements.length; i++){
+                elements[i].style.color="#3F48CC";
+            }
+        }
+
+        function colorSwapNormal() {
+            document.body.style.backgroundColor="#4C0152";
+            document.getElementById("navigation").style.backgroundColor="#4C0152";
+            document.getElementById("navRule").style.backgroundColor="#A349A4";
+
+            var elements = document.querySelectorAll("p, a, li, h1, h2, nav, hr, label");
+
+            for (let i = 0; i < elements.length; i++){
+                elements[i].style.color="#A349A4";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
